@@ -1,0 +1,71 @@
+<!--Boilerplate Code-->
+<!--What is Boilerplate code-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVA Bank</title>
+    
+</head>
+<body> <!--This part is the Trunk of the Node-Dom-Tree-->
+    <!--This part get transformed into the Node-Dom-Tree-->
+    <nav><!--Is the the first branch off of the Trunk-->
+        <p><strong>Home</strong></p><!--These become Children-->
+        <p>Account</p>
+        <p>Transactions</p>
+    </nav>
+    <!--Old Way Vs Semantic-->
+    <div style="display: none;"> <!--Divs are containers that surround other elements, but it doesn't natually describes what it holds without comments or classes/ids-->
+    </div>
+    <!--With Semantic HTML it allows to be more descriptive with our html code-->
+    <aside><!--Meaning this is supposed to be on the side of the webpage-->
+        <!--User Information, Full Name, Balance, Age of the account-->
+        <!-- heading tags, and they are different from the header, h1, h2, h3, h4, h5, h6-->
+        <h3 id="customer-name">Welcome Matthew</h3>
+        <h4 id="customer-balance">Balance: $4500</h4>
+        <p id="customer-account-time">Account with us for 4 years</p>
+    </aside>
+    <main><!--Meaning -->
+        <!--The Table of Tranasactions-->
+        <!-- <form action="get" onsubmit="displayInput(event)">
+            <input type="text" name="some-text" id="some-text">
+            <button type="submit">Submit</button>
+        </form> -->
+        <table>
+            <thead>
+                <tr>
+                    <th>| Transaction ID |</th>
+                    <th>Amount |</th>
+                    <th>Type |</th>
+                    <th>Status |</th>
+                    <th>Date |</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>$ 500</td>
+                    <td>Withdraw</td>
+                    <td>Completed</td>
+                    <td>01/22/26 12:55</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>$ 10000</td>
+                    <td>Deposit</td>
+                    <td>Pending</td>
+                    <td>01/24/26 07:35</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <!-- <script>
+        function displayInput(e) {
+            e.preventDefault()
+            const inputInfo = document.getElementById("some-text")
+            alert(inputInfo)
+        }
+    </script> -->
+</body>
+</html>
