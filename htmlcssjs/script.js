@@ -193,3 +193,159 @@ if (!boolResult) {
 if(!5) {
     console.log("error")
 }
+
+
+// Functions
+// What are Functions
+// It's algorithmic set of instructions
+// There Three ways to declare functions
+
+// Function Statement
+function someFunction() {
+    //you have your set of instructions
+    for (let count = 0; count < 50; count++) {
+        if(count % 2 === 0){
+            console.log(count);
+        } else {
+            console.log("Odd");    
+        }
+    }
+}
+
+//Function Expression
+const funcArrow = function() { // <- This is an Object
+    // This is another way of declaring functions
+    // This is not the Arrow Function
+}
+
+//Is Developers, Even though they come up with solution, they also like to reduce work effort to max results.
+// Arrow Function
+
+const funcArrow2 = () => {
+
+}
+
+funcArrow(10)
+//Parameterless Functions
+
+//Parameterized Functions
+// You should avoid passing parameters that will not be used into the function
+// Challenge 1 Debugging
+// Is to find out why even though the array has 5 init why its not triggering the if statement 
+const checkIfFiveIsInArray = (arr) => {
+    arr.forEach(element => {
+        if(element === 5) return true // <-- This is a Lambda Expression/ Unnamed Function
+    });
+    return false
+}
+
+const array1 = [6,2,7,9,10,5,8]
+
+console.log(checkIfFiveIsInArray(array1))
+
+const spreadParameter = (...nums) => {
+    let result = 0
+    for(let numsInArray = 0; numsInArray < nums.length; numsInArray++) {
+        result += nums[numsInArray]
+    }
+    return result
+}
+
+console.log(spreadParameter(5,4,9,10));
+console.log(spreadParameter(1,2));
+console.log(spreadParameter(6,7,3,1,45, 65, 15));
+
+// Returns
+// the main point of the return, is break out of the function scope the return called
+// function will either return a piece of Data or it undefined
+// this includes function that don't state a return
+
+const product = (num1, num2) => {
+    return num1 * num2 // <-- This is a basic return, using a Pure function
+}
+// A pure function will always have the same result, No unexpected side affects
+console.log(product(2, 2));
+console.log(product(2, 2));
+
+const divisible = (num1, num2) => {
+    if (num1 === 0 || num2 === 0) return 0 //<-- Early Return Statement to break before the rest of the code runs
+    return num1 / num2
+}
+
+console.log(divisible(15, 0));
+console.log(divisible(15, 3));
+
+//const substract = (num1, num2) => num1 - num2 // <-- is know as a Implicit return
+
+const substract = (num1, num2) => { num1 - num2 } // <-- This will not be treated as implicit return
+// the reason it not consider implicit is because of the curly brackets
+// when you have the curly brackets you have to state the return otherwise it goes to the default of undefined
+console.log(substract);
+
+// Nested Functions
+// Functions inside Function
+
+const exampleOuterFunction = () => { //<-- Very simple example of closure happening
+    const outerVar = "I'm on the outside of the inner function"// <-- this variable belongs to the outside function
+
+    const inner = () => {
+        console.log(outerVar)//<-- it's being used here
+        console.log("I'm from the Inner")
+        console.log(num)
+    }
+
+    inner()
+}
+
+// exampleOuterFunction().inner()
+
+// inner()
+
+// Scopes
+// Its How our Varaibles are place and ability to access them
+// when you write a variable out outside a function or class its consider global/file scoped
+// when global, you can access it through the whole script file
+// function scoped
+// function scoped variables and functions/methods can only be called inside the function
+// Variable Shadowing
+const sum = (num1, num2) => {
+    let num = 0 //<-- this num will hide the other num only inside this function
+}
+
+// Closures
+// So we have already been using closures.
+// A closure is a function that has access to variable from its outer function, even after the outer function has returned
+
+// Closure Backpack Comparsion
+// You would the outer function, the backpack is an inner function
+// when the call to the backpack is made, it loads the outer variable being called inside of itself
+// Problems that can be caused by Closures: 
+
+const createFunctionsBroken = () => {
+    const functions = [];
+    
+    for (let i = 0; i < 3; i++) {  // var is function-scoped!
+        functions.push(() => {
+            console.log(i);  // Closes over the SAME i
+        });
+    }
+    
+    return functions;
+};
+
+const brokenFuncs = createFunctionsBroken();
+
+console.log(brokenFuncs);
+brokenFuncs[0]()
+brokenFuncs[1]()
+brokenFuncs[2]()
+
+//Promises
+// A promise is an object that knows information is coming, just doesn't know when it going to arrive
+// Fetch API built into JavaScript
+
+const characters = fetch("https://rickandmortyapi.com/api/character")
+.then(res => console.table(res))
+.catch(err => console.error(err))
+
+console.table(characters)
