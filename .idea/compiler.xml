@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="strings" />
         <module name="variables" />
+        <module name="classes-and-objects" />
       </profile>
     </annotationProcessing>
   </component>
