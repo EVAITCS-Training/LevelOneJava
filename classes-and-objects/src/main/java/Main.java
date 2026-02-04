@@ -17,4 +17,13 @@ public class Main {
         methodExample.methodExample4();
         MethodExample.methodExample4();
     }
+
+    public static void proceedCombat(
+            BaseStat attacker,
+            BaseStat defender
+    ) {
+        if(attacker.getDex() > defender.getDex()) {
+            attacker.attack(defender);
+        }
+    }
 }
