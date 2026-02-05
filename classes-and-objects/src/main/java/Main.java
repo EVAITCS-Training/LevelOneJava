@@ -26,4 +26,17 @@ public class Main {
             attacker.attack(defender);
         }
     }
+
+    public static int add(int a, int b, int c, int d, int e) {
+        return a + b + c + d + e;
+    }
+
+    public static int add(NumberCollection numberCollection) {
+        return numberCollection.a +
+                numberCollection.b +
+                numberCollection.c +
+                numberCollection.d +
+                numberCollection.e;
+    }
+
 }
