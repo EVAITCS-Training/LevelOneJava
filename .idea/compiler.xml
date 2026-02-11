@@ -10,6 +10,8 @@
         <module name="classes-and-objects" />
         <module name="strings" />
         <module name="generics" />
+        <module name="exceptions" />
+        <module name="streams" />
       </profile>
     </annotationProcessing>
   </component>

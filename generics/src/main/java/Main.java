@@ -1,5 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
+import com.sun.source.tree.Tree;
+
+import java.util.*;
 import java.util.function.BinaryOperator;
 
 public class Main {
@@ -16,6 +17,14 @@ public class Main {
 
         Calculator<Integer> integerCalculator = new Calculator<>(0, Integer::sum);
 
-        integerCalculator.add()
+        //integerCalculator.add()
+
+        Set<String> stringSet = new LinkedHashSet<>();
+        stringSet.add("Hi");
+        stringSet.add("bob");
+        stringSet.add("Joe");
+        stringSet.add("Hell");
+        stringSet.add("Diablo");
+        System.out.println(stringSet);
     }
 }
