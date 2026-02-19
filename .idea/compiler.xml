@@ -10,8 +10,9 @@
         <module name="classes-and-objects" />
         <module name="strings" />
         <module name="generics" />
-        <module name="exceptions" />
+        <module name="jdbc_crud" />
         <module name="streams" />
+        <module name="exceptions" />
       </profile>
     </annotationProcessing>
   </component>
