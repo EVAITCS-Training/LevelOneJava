@@ -12,6 +12,7 @@
         <module name="generics" />
         <module name="jdbc_crud" />
         <module name="streams" />
+        <module name="multithreading" />
         <module name="exceptions" />
       </profile>
     </annotationProcessing>

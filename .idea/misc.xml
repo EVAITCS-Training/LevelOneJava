@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/streams/pom.xml" />
         <option value="$PROJECT_DIR$/exceptions/pom.xml" />
         <option value="$PROJECT_DIR$/jdbc_crud/pom.xml" />
+        <option value="$PROJECT_DIR$/multithreading/pom.xml" />
       </list>
     </option>
   </component>
